@@ -27,15 +27,16 @@ def button_click():
 
 
 window = tk.Tk()
-window.geometry("300x100")
+window.geometry("200x70")
 
 label = tk.Label(text="n loop")
-label.pack()
+label.grid(row=0, column=0, padx=10, pady=5)
 
-nloop = tk.Entry()
-nloop.pack()
+nloop = tk.Entry( width=10)
+nloop.grid(row=0, column=1, padx=10, pady=5)
+nloop.insert(0,"5")
 
 button = tk.Button(text="Execute", command=button_click)
-button.pack()
+button.grid(row=1, column=1, padx=10, sticky="w")
 
 window.mainloop()
